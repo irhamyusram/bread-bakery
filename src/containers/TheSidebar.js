@@ -12,8 +12,6 @@ import {
   CSidebarNavItem,
   CImg
 } from '@coreui/react'
-
-import CIcon from '@coreui/icons-react'
 import mainLogo from'../assets/icons/icon.png';
 
 // sidebar nav config
@@ -32,7 +30,7 @@ const TheSidebar = () => {
         <CImg
             src={mainLogo} 
             fluid
-            width={190}
+            width={175}
          />
 
       </CSidebarBrand>

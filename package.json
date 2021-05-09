@@ -1,7 +1,7 @@
 {
   "name": "bread-bakery-fr",
   "version": "1.0",
-  "description": "CoreUI React Open Source Bootstrap 4 Admin Template",
+  "description": "",
   "author": "Irham Yusra M",
   "proxy": "http://localhost:5000",
   "contributors": [
@@ -14,8 +14,8 @@
   "license": "MIT",
   "private": true,
   "repository": {
-    "type": "git",
-    "url": "git@github.com:coreui/coreui-free-react-admin-template.git"
+    "type": "",
+    "url": ""
   },
   "dependencies": {
     "@coreui/chartjs": "^2.0.0",

@@ -16,9 +16,9 @@ import {
  
 } from '@coreui/react'
 
-import { DocsLink } from '../../../src/reusable'
+import { DocsLink } from '../../reusable'
 
-const OptDashboard2 = () => {
+const OperatorProcs = () => {
   
 
   return (
@@ -88,7 +88,6 @@ const OptDashboard2 = () => {
               
               <CCol>
               <div className="d-flex row justify-content-end">
-                <CButton color="info" className="px-5 -2">Prev</CButton>
                 <CButton color="success" className="px-5">Submit</CButton>
               </div>
               </CCol>
@@ -102,4 +101,4 @@ const OptDashboard2 = () => {
   )
 }
 
-export default OptDashboard2
+export default OperatorProcs

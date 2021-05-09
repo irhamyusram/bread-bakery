@@ -61,7 +61,7 @@ const TheHeader = () => {
          />
       </CHeaderBrand>
 
-      <CHeaderNav className="d-md-down-none mr-auto px-4 mt-4 mb-4">
+      <CHeaderNav className="d-md-down-none mr-auto px-4 mt-4 mb-3">
         <h1 className = "text-white"><i>Supervisor</i></h1>
       </CHeaderNav>
 

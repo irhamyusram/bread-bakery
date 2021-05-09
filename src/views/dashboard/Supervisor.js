@@ -15,7 +15,7 @@ import {
 
 
 
-const Dashboard = () => {
+const Supervisor = () => {
 
   const [breads, setBreads] = useState();
 
@@ -60,7 +60,6 @@ const Dashboard = () => {
 
 
   const fields = [
-    { key:'id', show:false},
     { key: 'breadName', _style: { width: '40%'} },
     { key: 'operatorName', _style: { width: '20%'} },
     { key: 'status', _style: { width: '20%'} },
@@ -183,4 +182,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Supervisor
