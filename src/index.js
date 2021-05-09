@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Breads from "./components/Database";
+import { BrowserRouter } from 'react-router-dom';
 
 import { icons } from './assets/icons'
 
@@ -17,7 +17,7 @@ React.icons = icons
 
 ReactDOM.render(
   <Provider store={store}>
-    <div><App /></div> 
+    <BrowserRouter><App /></BrowserRouter> 
   </Provider>,
   document.getElementById('root')
 );
