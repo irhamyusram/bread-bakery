@@ -15,6 +15,14 @@ import {
  
 } from '@coreui/react'
 
+import {
+  Redirect,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+import Content from '../../containers/TheContent'
+
 const OperatorPrep = () => {
   
 

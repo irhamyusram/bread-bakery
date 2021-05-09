@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "",
   "author": "Irham Yusra M",
-  "proxy": "http://localhost:5000",
+  "proxy": "",
   "contributors": [
     {
       "name": "CoreUI Team",

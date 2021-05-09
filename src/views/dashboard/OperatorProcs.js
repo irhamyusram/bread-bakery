@@ -7,7 +7,6 @@ import {
   CListGroup,
   CRow,
   CListGroupItem,
-  CInputCheckbox,
   CLabel,
   CFormGroup,
   CInput,

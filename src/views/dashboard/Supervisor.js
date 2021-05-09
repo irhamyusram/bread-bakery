@@ -21,7 +21,7 @@ const Supervisor = () => {
 
   //fetcing Data from database Breads (mongoDB)
       useEffect(()=>{
-         fetch("/breads/").then( res=>{
+         fetch("http://localhost:5000/breads/").then( res=>{
               if(res.ok){
                   return res.json()
               }
