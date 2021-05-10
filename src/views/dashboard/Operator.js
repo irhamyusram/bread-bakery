@@ -29,7 +29,7 @@ const Operator = () => {
   const bakingProcess =[];
 
   const [small, setSmall] = useState(false)
-  const operator = "Nazrul"
+  
   const[isFlourChecked, setFlourIsChecked] = useState(false)
   const[isSugarChecked, setSugarIsChecked] = useState(false)
   const[isSweetenerChecked, setSweetenerIsChecked] = useState(false)
@@ -50,7 +50,8 @@ const Operator = () => {
   const[ovenDegree, setOvenDegree] = useState();
   const[ovenTime, setOvenTime] = useState();
 
-  
+  const operatorString = localStorage.getItem('username');
+  const operatorName = JSON.parse(operatorString);
 
   function handleSubmit(){
     
@@ -58,7 +59,7 @@ const Operator = () => {
     wrappedProcess();
 
     const newBread ={
-        operatorName : operator,
+        operatorName : operatorName,
         breadName : breadName,
         rawMaterial : rawMaterial,
         process : bakingProcess,

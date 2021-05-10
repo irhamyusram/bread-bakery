@@ -14,7 +14,6 @@ import {
 } from '@coreui/react'
 
 
-
 const Supervisor = () => {
 
   const [breads, setBreads] = useState();
@@ -57,8 +56,6 @@ const Supervisor = () => {
 
   }
 
-
-
   const fields = [
     { key: 'breadName', _style: { width: '40%'} },
     { key: 'operatorName', _style: { width: '20%'} },
@@ -86,7 +83,7 @@ const Supervisor = () => {
     
     <CCard>
       <CCardHeader color="light">
-        <h1 className="d-flex justify-content-center"> Bread Making Process Monitor </h1>
+        <h1 className="d-flex justify-content-center"> Bread Making Approval Monitor </h1>
       </CCardHeader>
       <CCardBody>
     <CDataTable

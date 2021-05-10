@@ -40,6 +40,7 @@ async function loginUser(credentials) {
       username,
       password
     });
+    localStorage.setItem('username', JSON.stringify(username));
     setToken(token);
   }
   return (
