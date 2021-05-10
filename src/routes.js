@@ -26,8 +26,7 @@ const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/Butt
 const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/charts/Charts'));
 const Supervisor = React.lazy(() => import('./views/dashboard/Supervisor'));
-const OperatorPrep = React.lazy(() => import('./views/dashboard/OperatorPrep'));
-const OperatorProcs = React.lazy(() => import('./views/dashboard/OperatorProcs'));
+const Operator = React.lazy(() => import('./views/dashboard/Operator'));
 const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 const Brands = React.lazy(() => import('./views/icons/brands/Brands'));
@@ -43,8 +42,7 @@ const User = React.lazy(() => import('./views/users/User'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Supervisor', component: Supervisor},
-  { path: '/optdashboard', name: 'OperatorPrep', component: OperatorPrep},
-  { path: '/optdashboard2', name: 'OperatorProcs', component: OperatorProcs},
+  { path: '/dashoperator', name: 'Operator', component: Operator}
 
 ];
 
