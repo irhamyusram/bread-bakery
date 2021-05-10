@@ -22,13 +22,14 @@ import {
 
 const Operator = () => {
   
-  const Operator = "Nazrul"
   const[breadName, setBreadName] = useState(''); 
 
   const nextRef = useRef(null);
+  const rawMaterial = [];
+  const bakingProcess =[];
 
   const [small, setSmall] = useState(false)
-
+  const operator = "Nazrul"
   const[isFlourChecked, setFlourIsChecked] = useState(false)
   const[isSugarChecked, setSugarIsChecked] = useState(false)
   const[isSweetenerChecked, setSweetenerIsChecked] = useState(false)
@@ -52,17 +53,20 @@ const Operator = () => {
   
 
   function handleSubmit(){
+    
+    wrappedRawMaterial();
+    wrappedProcess();
 
     const newBread ={
-        operatorName : Operator,
+        operatorName : operator,
         breadName : breadName,
-        rawMaterial : wrappedRawMaterial,
-        process : wrappedProcess,
+        rawMaterial : rawMaterial,
+        process : bakingProcess,
         status : "Pending"
     } 
 
     axios.post('http://localhost:5000/breads/new', newBread);
-    window.location.reload()
+    //window.location.reload()
     setSmall(!small)
 
   }
@@ -74,7 +78,6 @@ const Operator = () => {
   };
 
   function wrappedRawMaterial (){
-    const rawMaterial = [];
     
     if(isFlourChecked) {rawMaterial.push("Flour")} ;
     if(isSugarChecked) {rawMaterial.push("Sugar")} ;
@@ -90,15 +93,13 @@ const Operator = () => {
     if(isBakingPowderChecked) {rawMaterial.push("Baking Powder")} ;
 
       console.log(rawMaterial);
-      return rawMaterial;
+     
       
   }
 
   function wrappedProcess(){
-    const bakingProcess = [];
     bakingProcess.push (waterVolume, mixingTime, restingTime, kneedingTime, ovenDegree, ovenTime);
     console.log(bakingProcess);
-    return bakingProcess;
   }
 
   return (
@@ -117,7 +118,7 @@ const Operator = () => {
             <CCardBody>
               <CInput id="input-normal" name="input-normal" placeholder="Enter Bread Name" required="required" pattern="[A-Za-z]{1,20}"
                       value ={breadName} 
-                      onChange={(e)=> setBreadName(e.target.value)} />
+                      onChange={(e)=> setBreadName(e.target.value)} required/>
             </CCardBody>
           </CCard>
           <CCard>
@@ -232,10 +233,10 @@ const Operator = () => {
                     <CCol sm="7">
                      <CInput id="input-normal" 
                              name="input-normal" 
-                             placeholder="Enter Water Volume" required="required" pattern="[0-9]{1,20}"
-                             onChange={(e) => setWaterVolume(e.target.value)}/>
+                             placeholder="Enter Water Volume" required="required" type="number"  
+                             onChange={(e) => setWaterVolume(e.target.value)} required/>
                     </CCol>
-                    <CLabel col>ml</CLabel>
+                    <CLabel col>( mL )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
                 <CListGroupItem>
@@ -244,10 +245,10 @@ const Operator = () => {
                     <CCol sm="7">
                      <CInput id="input-normal" 
                              name="input-normal" 
-                            placeholder="Enter Mixing Time" required="required" pattern="[0-9]{1,20}"
-                            onChange={(e) => setMixingTime(e.target.value)}/>
+                            placeholder="Enter Mixing Time" required="required" type="number"  
+                            onChange={(e) => setMixingTime(e.target.value)} required/>
                     </CCol>
-                    <CLabel col>minutes</CLabel>
+                    <CLabel col>( minutes )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
                 <CListGroupItem>
@@ -256,10 +257,10 @@ const Operator = () => {
                     <CCol sm="7">
                      <CInput id="input-normal" 
                              name="input-normal" 
-                             placeholder="Enter Resting Time" required="required" pattern="[0-9]{1,20}"
-                             onChange={(e) => setRestingTime(e.target.value)}/>
+                             placeholder="Enter Resting Time" required="required" type="number" 
+                             onChange={(e) => setRestingTime(e.target.value)} required/>
                     </CCol>
-                    <CLabel col>minutes</CLabel>
+                    <CLabel col>( minutes )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
                 <CListGroupItem>
@@ -268,10 +269,10 @@ const Operator = () => {
                     <CCol sm="7">
                      <CInput id="input-normal" 
                              name="input-normal" 
-                             placeholder="Enter Kneeding Time" required="required" pattern="[0-9]{1,20}"
-                             onChange={(e) => setKneedingTime(e.target.value)}/>
+                             placeholder="Enter Kneeding Time" required="required" type="number"  
+                             onChange={(e) => setKneedingTime(e.target.value)} required/>
                     </CCol>
-                    <CLabel col>minutes</CLabel>
+                    <CLabel col>( minutes )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
                 <CListGroupItem>
@@ -280,10 +281,10 @@ const Operator = () => {
                     <CCol sm="7">
                     <CInput id="input-normal" 
                              name="input-normal" 
-                             placeholder="Enter Oven Degree" required="required" pattern="[0-9]{1,20}"
-                             onChange={(e) => setOvenDegree(e.target.value)}/>
+                             placeholder="Enter Oven Degree" type="number"  
+                             onChange={(e) => setOvenDegree(e.target.value)} required/>
                     </CCol>
-                    <CLabel col>°c</CLabel>
+                    <CLabel col>( °c )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
                 <CListGroupItem>
@@ -292,10 +293,10 @@ const Operator = () => {
                     <CCol sm="7">
                     <CInput id="input-normal" 
                              name="input-normal" 
-                             placeholder="Enter Oven Time" required="required" pattern="[0-9]{1,20}"
-                             onChange={(e) => setOvenTime(e.target.value)}/>
+                             placeholder="Enter Oven Time" type="number"  
+                             onChange={(e) => setOvenTime(e.target.value)} required/>
                     </CCol>
-                    <CLabel col >minutes</CLabel>
+                    <CLabel col >( minutes )</CLabel>
                   </CFormGroup>
                 </CListGroupItem>
               

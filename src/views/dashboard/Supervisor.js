@@ -162,7 +162,7 @@ const Supervisor = () => {
                             type="submit"
                             size="sm" 
                             color="success">
-                    Approved
+                    Approve
                   </CButton>
                   <CButton id="rejectedButton"
                             onClick={() => handleClickRejected(item)} type="submit" 

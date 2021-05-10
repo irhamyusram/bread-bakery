@@ -11,7 +11,7 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Bread Making',
+    name: 'Bread Maker',
     to: '/dashoperator',
     icon: <CIcon name="cil-factory" customClasses="c-sidebar-nav-icon"/>,
   },
